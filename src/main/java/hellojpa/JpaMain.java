@@ -2,8 +2,6 @@ package hellojpa;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 public class JpaMain {
 
     public static void main(String[] args) {
@@ -16,10 +14,11 @@ public class JpaMain {
         //code
         try {
 
-            Member findMember1 = em.find(Member.class, 101L);
-            Member findMember2 = em.find(Member.class, 101L);
+            Member member1 = new Member(150L, "A");
+            Member member2 = new Member(160L, "B");
 
-            System.out.println("(findMember2 == findMember1) = " + (findMember2 == findMember1));
+            em.persist(member1);
+            em.persist(member2);
 
             tx.commit();
 
