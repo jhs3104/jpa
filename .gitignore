@@ -3,6 +3,9 @@
 build/
 !gradle/wrapper/gradle-wrapper.jar
 
+# Maven (레거시)
+target/
+
 # IDE
 .idea/
 *.iml
@@ -20,4 +23,7 @@ Thumbs.db
 # H2 Database
 *.mv.db
 *.trace.db
+
+
+
 
