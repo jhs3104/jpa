@@ -2,9 +2,15 @@ package hellojpa;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "MBR")
 public class Member {
+
+    @Id
+    private Long id;
+    private String name;
 
     public Member() {
     }
@@ -31,7 +37,4 @@ public class Member {
         this.name = name;
     }
 
-    @Id
-    private Long id;
-    private String name;
 }
